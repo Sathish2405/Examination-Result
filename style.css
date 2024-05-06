@@ -1,0 +1,141 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color:wheat;
+}
+@property --a { 
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
+.main{
+    position: relative;
+    width: 500px;
+    min-height: 500px; 
+    display: flex;
+    padding-top: 10px;
+    justify-content: center; 
+    background: repeating-conic-gradient( 
+    from var(--a), 
+        #01db51 0%,
+        #0105db 10%,
+        transparent 10%,
+        transparent 50%
+    );
+    animation: animate 6s linear infinite;
+}
+@keyframes animate { 
+    0% {
+        --a: 0deg;
+    }
+    100% {
+        --a: 360deg;
+    }
+}
+.main::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    background: repeating-conic-gradient(
+        from var(--a),
+        #01db51 0%,
+        #db01c9 10%,
+        transparent 10%,
+        transparent 50%
+    );
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
+}
+.main::after {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background: white;
+    border: 10px solid white;
+}
+form {
+    height: 500px;
+    position: relative;
+    z-index: 2;
+}
+.text h2 {
+    font-size: 17px;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 40px;
+    padding-top: 15px; 
+    text-align: center;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    width: 100%;
+}
+.box h2{
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    margin-bottom: 40px;  
+    color: white;
+    height: 90px;
+    padding-top: 20px;
+    background-color: #db01c9;
+}
+.boxs{
+    padding-top: 40px;
+    font-weight: bold;
+    border-style: solid;
+    border-width: 3px;
+    border-color: orangered;
+    height: 230px;
+}
+.box1{
+    text-align: center;
+}
+.box2{
+    text-align: center;
+    padding-right: 73px;
+}
+.inputBx .main1{
+    padding-top: 30px;
+    padding-left: 50px;
+}
+.inputBx .btn{
+    background: #01dbaf;
+    cursor: pointer;
+    font-weight: 600;
+    color: #343b35;
+    /* filter: drop-shadow(0 0 15px #01db8f);  */
+    font-size: 1rem;
+    padding: 0.1rem 0.6rem;
+    border-width: 3px;
+}
+.inputBx .main2{
+    padding-left: 360px;
+    padding-bottom: 30px;
+}
+.inputBx .btn1{
+    background: white;
+    cursor: pointer;
+    font-weight: 600;
+    color: #343b35;
+    /* filter: drop-shadow(0 0 15px #01db8f);  */
+    font-size: 1rem;
+    padding: 0.1rem 0.6rem;
+    border-width: 3px;
+}
+
+
+
+
+
+
+
+
